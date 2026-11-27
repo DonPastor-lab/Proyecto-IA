@@ -108,8 +108,7 @@ def make_decision(risk):
     - Riesgo 0 (bajo): aprobar con condiciones estándar.
 
     Explica al usuario la decisión y su recomendación, no expliques las reglas, solo explica si fue aprobada (Riesgo 0),
-    si se debe solicitar documentación adicional (Riesgo 1) o si se debe recomendar educación financiera (Riesgo 0) (en este caso, provee información sobre educacion financiera).
-    No cambies la decisión establecida.
+    si se debe solicitar documentación adicional (Riesgo 1), o rechazar la solicitud y recomendar educación financiera (Riesgo 2).
     """
 
     response = requests.post(
