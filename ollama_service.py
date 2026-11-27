@@ -83,14 +83,14 @@ JSON:
 # funcion para que ollama explique el resultado
 def make_decision(risk):
 
-    if risk == 2:
-        decision = "Rechazar solicitud"
+    if risk == 0:
+        decision = "Aprobar la solicitud"
 
     elif risk == 1:
         decision = "Solicitar documentación adicional"
 
-    elif risk == 0:
-        decision = "Aprobar solicitud"
+    elif risk == 2:
+        decision = "Rechazar la solicitud"
 
     else:
         return "Riesgo no identificado"
@@ -106,9 +106,11 @@ def make_decision(risk):
     - Riesgo 1 (medio): solicitar documentación adicional
       y evaluar nuevamente.
     - Riesgo 0 (bajo): aprobar con condiciones estándar.
-
-    Explica al usuario la decisión y su recomendación, no expliques las reglas, solo explica si fue aprobada (Riesgo 0),
-    si se debe solicitar documentación adicional (Riesgo 1), o rechazar la solicitud y recomendar educación financiera (Riesgo 2).
+    
+    No muestres las reglas solamente muestra la decision final y la recomendacion al usuario.
+    Si el riesgo es alto rechazar la solicitud y recomendar solicitud financiera.
+    Si el reisgo es medio Solicitar documentacion adicional y evaluar nuevamente.
+    Si el riesgo es bajo aprobar con condiciones estandar.
     """
 
     response = requests.post(

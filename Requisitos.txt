@@ -1,0 +1,68 @@
+estado_civil
+Casado        
+Soltero       
+Divorciado     
+Viudo          
+
+nivel_educacion
+Universitario    
+Secundaria       
+Técnico          
+Posgrado          
+
+tipo_empleo
+Empleado         
+Independiente    
+Empresario        
+Jubilado          
+Desempleado       
+
+tipo_vivienda
+Alquilada     
+Propia        
+Hipotecada     
+Familiar       
+
+proposito_prestamo
+Consumo                   
+Consolidación de deuda     
+Vehículo                   
+Vivienda                   
+Negocio                    
+Educación                  
+
+edad: Edad del solicitante
+
+dependientes: Numero de dependientes economicos 
+
+antiguedad_laboral_anios: Cuantos años lleva laborando en la misma empresa
+
+ingreso_mensual: Ingresos mensuales de la persona que lo solcita 
+
+monto_prestamo:  Monto del préstamo solicitado
+
+plazo_meses: Duración total del préstamo 
+
+tasa_interes_anual: Intereses anuales
+
+cuota_mensual: Cuota mensual a pagar
+
+score_crediticio: Que tan probable es que pague el solcitante que va desde 300 a 1000 puntos.
+
+num_lineas_credito: Representa la cantidad total de cuentas o productos de créditos activos.
+
+utilizacion_credito: porcentaje de su limite de crédito disponible
+
+deuda_vigente: monto total de dinero que el solicitante debe. 
+
+ratio_deuda_ingreso: proporcion: de los ingresos mensuales del solicitante se destina a pagar sus deudas.
+
+ratio_prestamo_ingreso_anual: proporcion que representa el monto total del prestamos solicitado respecto a todo el dinero que gana el solicitante el año completo.
+
+pagos_atrasados_12m: cantidad de veces que el solicitane se ha retrasado en el pago de sus cuotas durante los últimos 12 meses
+
+consultas_credito_6m: Cantidad de veces que entidades financieras han revisado el historial crediticio durante los últimos 6 meses.
+
+historial_crediticio_meses: antigüedad total en meses desde que el solicitante abrió su primera cuenta de credito
+
+tiene_cuenta_ahorro: Binaria que indica si el solicitante posee o no una cuenta bancaria 1 tiene, 0 no tiene 
