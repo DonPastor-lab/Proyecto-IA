@@ -1,14 +1,18 @@
 import joblib
 import pandas as pd
+from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 #Cargar el modelo entrenado y las columnas exactas del One-Hot Encoding
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODELS_DIR = BASE_DIR / "modelo"
+
 try:
-    modelo = joblib.load("modelo_riesgo.joblib")
-    columnas_modelo = joblib.load("columnas_modelo.joblib")
+    modelo = joblib.load(MODELS_DIR / "modelo_riesgo.joblib")
+    columnas_modelo = joblib.load(MODELS_DIR / "columnas_modelo.joblib")
 except Exception as e:
-    raise RuntimeError(f"Error al cargar los archivos del modelo: {e}")
+    raise RuntimeError(f"Error al cargar los archivos del modelo en {MODELS_DIR}: {e}")
 
 app = FastAPI(
     title="API de Evaluación de Riesgo Crediticio",

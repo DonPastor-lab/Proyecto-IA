@@ -2,7 +2,10 @@ import gradio as gr
 import requests
 import json
 
-from ollama_service import clean_input, make_decision
+try:
+    from agente.ollama_service import clean_input, make_decision
+except ImportError:
+    from ollama_service import clean_input, make_decision
 
 API_URL = "http://localhost:8000/predict"
 
