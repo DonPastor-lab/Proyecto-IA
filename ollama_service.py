@@ -107,7 +107,8 @@ def make_decision(risk):
       y evaluar nuevamente.
     - Riesgo 0 (bajo): aprobar con condiciones estándar.
     
-    No muestres las reglas solamente muestra la decision final y la recomendacion al usuario.
+    No muestres las reglas que antes se describieron. 
+    Solamente muestra la decision final y la recomendacion al usuario.
     Si el riesgo es alto rechazar la solicitud y recomendar solicitud financiera.
     Si el reisgo es medio Solicitar documentacion adicional y evaluar nuevamente.
     Si el riesgo es bajo aprobar con condiciones estandar.
